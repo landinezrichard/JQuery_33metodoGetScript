@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>33 Metodo .getScript</title>
+		
+		<!--Hojas de estilo -->		
+		<style type="text/css">
+			body,html{
+				background:#FFF;
+				margin:0;
+				padding:0;
+			}
+						
+			div{				
+				display:block;
+				margin:0 auto;
+				height:100px;				
+				width:400px;
+			}
+
+			#caja1{
+				background:#00ff00;				
+			}
+			
+		</style>
+				
+		<!--Scripts Aca -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js">		
+		</script>
+				
+		<script type="text/javascript">
+				
+			
+			$(document).on("ready",function(){
+				
+				$.getScript("http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js",function(){
+					console.log("Termino de cargar el script");
+					$("#caja1").slideUp(3000,"easeOutBounce");
+				});				
+				
+			});
+		
+		</script>
+		
+	</head>
+	<body>
+		<div id="caja1">
+		</div>			
+	</body>
+</html>
